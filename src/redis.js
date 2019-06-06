@@ -42,6 +42,10 @@ module.exports = function (config) {
       // Override an emit that publishes to the hub
       service.mixin({
         emit: function (ev, data) {
+          if (data.hook) {
+            console.log('feathers-sync fix: preventing sync because error happened') 
+            return
+          }
           var event = path + ' ' + ev;
           debug('emitting event to channel %s', event);
           // Something is converting the second argument to a string here
