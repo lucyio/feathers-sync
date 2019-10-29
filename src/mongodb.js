@@ -1,4 +1,4 @@
-var mubsub = require('mubsub');
+var mubsub = require('./mubsub');
 var debug = require('debug')('feathers-sync');
 var omit = require('lodash').omit;
 
