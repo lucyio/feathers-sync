@@ -18,7 +18,7 @@ module.exports = exports = function (uri, options) {
  *
  * @api public
  */
-exports.version = require('../package').version;
+exports.version = require('../../package').version;
 
 /**
  * Expose Connection constructor.
